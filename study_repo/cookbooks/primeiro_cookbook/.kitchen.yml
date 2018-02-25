@@ -15,9 +15,14 @@ verifier:
 platforms:
   - name: ubuntu-16.04
     driver_config:
-      box: bento/ubuntu-14.04
+      box: bento/ubuntu-16.04
       network:
          - ["forwarded_port", {guest: 80, host: 8081}]
+  - name: centos-7.3
+    driver_config:
+      box: bento/centos-7.3
+      network:
+         - ["forwarded_port", {guest: 80, host: 8082}]
 suites:
   - name: default
     run_list:
